@@ -33,19 +33,19 @@ Structured Query Language (SQL) is a programming language for defining and manip
 
 ## 4. DML - Data Manipulation Language
 
-## 5. Exercise - creating a database server on Azure
+## 5. Exercise 1 - creating a database server on Azure
 
-This is an optional step that you can try on your own free of charge using the Microsoft Azure subscription that you get through IBU. See step-by-step instructions [here](create-sql-server-instance-azure.md). 
+This is an optional step that you can try on your own free of charge using the Microsoft Azure subscription that you get through IBU. See step-by-step instructions [here](./create-sql-server-instance-azure.md). 
 
-## 6. Exercise - creating a database on Azure
+## 6. Exercise 2 - creating a database on Azure
 
-This is an optional step that builds on the previous step, that you can again try on your own free of charge. See step-by-step instructions [here](create-azure-sql-db.md). 
+This is an optional step that builds on the previous step, that you can again try on your own free of charge. See step-by-step instructions [here](./create-azure-sql-db.md). 
 
-## 7. Exercise - creating data on the database
+## 7. Exercise 3 - creating data on the database
 
-This is the third optional step where you can add data into the database from the previous step. See step-by-step instructions here [].
+This is the third optional step where you can add data into the database from the previous step. See step-by-step instructions [here](./create-data-on-database.md).
 
-## 8. Exercise - querying data
+## 8. Exercise 4 - querying data
 
 The value of data is in turning facts into information with value. Here are several different ways to do this.
 

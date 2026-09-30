@@ -1,17 +1,25 @@
-# Creating data on the database
+# Exercise 3: Creating data on the database
+
+Go back to [main](./README.md).
 
 Note: this is a third optional step that you can try on your own free of charge once you have [created a SQL Server instance on Azure](./create-sql-server-instance-azure.md) and then [created an Azure SQL database instance](./create-azure-sql-db.md).
 
 1. Navigate to the database you created. From the left hand navigation pane, click on the `Query editor`.
-![Step 1 - Navigate to database]()
+
+![Step 1 - Navigate to database](./images/azure-05-navigate-to-db.png)
 
 2. Login using the username and password combination you created earlier.
-![Step 2 - Login to database]()
 
-3. You will get prompted to allow whitelist from your current computer to your database. Click on the `Allow whitelist` link.
-![Step 3 - Whitelist connections to database]()
+![Step 2 - Login to database](./images/azure-06-login-to-db.png)
 
-4. Create data on your database using SQL's INSERT statements.
+3. You will get prompted to allow whitelist from your current computer to your database. Click on the `Allowlist` link.
+
+![Step 3 - Whitelist connections to database](./images/azure-07-allow-whitelist.png)
+
+4. Open a SQL window by clicking on the `New query` button.
+![Step 4 - New query window](./images/azure-08-new-query-window.png)
+
+5. Create data on your database using SQL's INSERT statements by pasting and running the following queries.
 	First, do this on the Student table
 	```sql
 	-- create Student records

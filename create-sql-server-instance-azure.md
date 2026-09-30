@@ -1,4 +1,6 @@
-# Create a SQL Server instance on Microsoft Azure
+# Exercise 1: Create a SQL Server instance on Microsoft Azure
+
+Go back to [main](./README.md).
 
 Note: this is an optional step that you can try on your own free of charge using the Microsoft Azure subscription that you get through IBU. In the step-by-step instructions here, where any name contains the string `"jsmith1234"`, replace it with your own unique name stem by taking your IBU email and removing the "." and the "@ibu.ca" from it.
 

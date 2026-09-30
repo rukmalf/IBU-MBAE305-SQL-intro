@@ -1,4 +1,6 @@
-# Create an Azure SQL database instance
+# Exercise 2: Create an Azure SQL database instance
+
+Go back to [main](./README.md).
 
 Note: this is a second optional step that you can try on your own free of charge once you have [created a SQL Server instance on Azure](./create-sql-server-instance-azure.md).
 
