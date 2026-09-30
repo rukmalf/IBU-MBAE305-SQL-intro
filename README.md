@@ -6,7 +6,7 @@ This document gives you an overview of what you can do with SQL, and while you c
 
 ## 1. Basic Concepts
 
-The most common way to store information on computers is using relational database tables. This uses the techniques of Entity-Relationship modelling to define tables that store information, what their attributes are, and what the relationships among them are.
+The most common way to store information on computers is using relational database tables. This uses the techniques of [Entity-Relationship modelling](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) to define tables that store information, what their attributes are, and what the relationships among them are. We can then use [Relational Algebra](https://en.wikipedia.org/wiki/Relational_algebra) to inspect and manipulate this data.
 
 For example, think about this course, everyone taking this course, and the various assignments you have to do. Let's assume the following:
  - each student has a firstname, lastname and an email
@@ -14,12 +14,16 @@ For example, think about this course, everyone taking this course, and the vario
  - each student gets graded on each of the 6 assignments and gets a final grade
  
 If we captured all of this in an Excel spreadsheet, it would look like this:
+![Master spreadsheet with student, assessment and grade information](./images/denormalized-spreadsheet.png)
 
-But now we're repeating the student names and the assignment titles and grades. What if Prof. Kobra wanted to change the weights of the assignments?
-
-How do we track that the course has multiple grades - one per student, per assessment?
+But now we're repeating the student names and the assignment titles and grades. What if Prof. Kobra wanted to change the weights of the assignments? How do we track that the course has multiple grades - one per student, per assessment?? 🤔
 
 We can break this into three Entities - Course, Student, and Assessment.
+![Splitting up student, assessment and grade information](./images/normalized-spreadsheet.png)
+
+Now the data is no longer duplicated, but how do we manage this data and combine it back together? 😱
+
+This is the power of SQL!
 
 ## 2. What is SQL?
 
