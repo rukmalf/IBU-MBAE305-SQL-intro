@@ -6,7 +6,7 @@ This document gives you an overview of what you can do with SQL, and while you c
 
 ## 1. Basic Concepts
 
-The most common way to store information on computers is using relational database tables. This uses the techniques of [Entity-Relationship modelling](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) to define tables that store information, what their attributes are, and what the relationships among them are. We can then use [Relational Algebra](https://en.wikipedia.org/wiki/Relational_algebra) to inspect and manipulate this data.
+The most common way to store information on computers is using relational database tables. This uses the techniques of [Entity-Relationship modelling](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) to define tables that store information, what their attributes are, and what the relationships among them are. We can then use concepts of [Relational Algebra](https://en.wikipedia.org/wiki/Relational_algebra) to inspect and manipulate this data.
 
 For example, think about this course, everyone taking this course, and the various assignments you have to do. Let's assume the following:
  - each student has a firstname, lastname and an email
@@ -27,29 +27,64 @@ This is the power of SQL!
 
 ## 2. What is SQL?
 
-Structured Query Language (SQL) is a programming language for defining and manipulating relational data. SQL is subcategorized into four forms:
+Structured Query Language (SQL) is a programming language for defining and manipulating relational data. SQL is subcategorized into three main forms:
 * DDL - Data Definition Language
 * DCL - Data Control Language
-* DML - Data Manipulation Language
-* DQL - Data Query Language
+* DML - Data Manipulation Language (sometimes split into DML + DQL)
 
 ## 3. DDL - Data Definition Language
 
-## 4. DML - Data Manipulation Language
+Define, modify or manage a database's schema (its structure). For example, this include tables and other structural objects. 
 
-## 5. Exercise 1 - creating a database server on Azure
+Here are some example operations.
+
+| SQL keyword | Effect |
+| :---        | :---   |
+| `CREATE`    | Create a new database object like a table or an index. |
+| `ALTER`     | Modifies an existing database object, for example add columns to a table.     |
+| `DROP`      | Delete a database object. |
+| `TRUNCATE`  | Clears a database table, but leave its structure. |
+ 
+## 4. DCL - Data Control Language
+
+Control security and access to a database and its data. 
+
+Here are some example operations.
+
+| SQL keyword | Effect |
+| :---        | :---   |
+| `GRANT`     | Give permissions or a role (grouping of permissions) to a user. |
+| `REVOKE`    | Revoke a permission or a role from a user.     |
+| `DENY`      | Explicity ban specific privileges for a database object from a user. |
+
+## 5. DML - Data Manipulation Language
+
+Manipulate and query the actual data (not the structure). 
+
+Here are some example operations.
+
+| SQL keyword | Effect |
+| :---        | :---   |
+| `SELECT`    | Fetch data from the database tables that satisfies the given conditions. |
+| `INSERT`    | Add data into a database table. |
+| `UPDATE`    | Modify some data already present on the database that meets given conditions. |
+| `DELETE`    | Delete some data that meets given conditions. |
+
+Sometimes, the `SELECT` statement is considered to be a separate subcategory of "Data Query Language (DQL)".
+
+## 6. Exercise 1 - creating a database server on Azure
 
 This is an optional step that you can try on your own free of charge using the Microsoft Azure subscription that you get through IBU. See step-by-step instructions [here](./create-sql-server-instance-azure.md). 
 
-## 6. Exercise 2 - creating a database on Azure
+## 7. Exercise 2 - creating a database on Azure
 
 This is an optional step that builds on the previous step, that you can again try on your own free of charge. See step-by-step instructions [here](./create-azure-sql-db.md). 
 
-## 7. Exercise 3 - creating data on the database
+## 8. Exercise 3 - creating data on the database
 
 This is the third optional step where you can add data into the database from the previous step. See step-by-step instructions [here](./create-data-on-database.md).
 
-## 8. Exercise 4 - querying data
+## 9. Exercise 4 - querying data
 
 The value of data is in turning facts into information with value. Here are several different ways to do this.
 
