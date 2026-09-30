@@ -1,6 +1,6 @@
 # Exercise 1: Create a SQL Server instance on Microsoft Azure
 
-Go back to [main](./README.md).
+*Go back to [main](./README.md#6-exercise-1---creating-a-database-server-on-azure)*.
 
 Note: this is an optional step that you can try on your own free of charge using the Microsoft Azure subscription that you get through IBU. In the step-by-step instructions here, where any name contains the string `"jsmith1234"`, replace it with your own unique name stem by taking your IBU email and removing the "." and the "@ibu.ca" from it.
 
@@ -39,3 +39,5 @@ Note: this is an optional step that you can try on your own free of charge using
 
 10. Once the validation and deployment is complete, click on `Go to resource`.
 ![Step 10 - navigate to resource](./images/azure-03-create-db-server-08-complete.png)
+
+*Go back to [main](./README.md#6-exercise-1---creating-a-database-server-on-azure) or proceed to [Exercise 2 - creating a database on Azure](./create-azure-sql-db.md)*.

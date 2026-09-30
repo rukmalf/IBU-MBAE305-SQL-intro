@@ -1,6 +1,6 @@
 # Exercise 2: Create an Azure SQL database instance
 
-Go back to [main](./README.md).
+*Go back to [main](./README.md#7-exercise-2---creating-a-database-on-azure)*.
 
 Note: this is a second optional step that you can try on your own free of charge once you have [created a SQL Server instance on Azure](./create-sql-server-instance-azure.md).
 
@@ -17,3 +17,5 @@ Use the same naming convention here as well and replace with your details wherev
 
 4. Wait for the deployment to complete.
 ![Deployment in progress](./images/azure-04-create-db-04-deployed.png)
+
+*Go back to [main](./README.md#7-exercise-2---creating-a-database-on-azure) or proceed to [Exercise 3 - creating data on the database](./create-data-on-database.md)*.

@@ -1,6 +1,6 @@
 # Exercise 3: Creating data on the database
 
-Go back to [main](./README.md).
+Go back to [main](./README.md#8-exercise-3---creating-data-on-the-database).
 
 Note: this is a third optional step that you can try on your own free of charge once you have [created a SQL Server instance on Azure](./create-sql-server-instance-azure.md) and then [created an Azure SQL database instance](./create-azure-sql-db.md).
 
