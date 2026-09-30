@@ -51,73 +51,91 @@ The value of data is in turning facts into information with value. Here are seve
 
 1. list all the Students
 
-		SELECT *
-		FROM dbo.Student
+	```sql
+	SELECT *
+	FROM dbo.Student
+	```
 
 2. filter the students who got A's
 
-		SELECT *
-		FROM dbo.Student
-		WHERE FinalGrade >= 90
+	```sql
+	SELECT *
+	FROM dbo.Student
+	WHERE FinalGrade >= 90
+	```
 
 3. list only the student names and email addresses
 
-		SELECT Firstname, Lastname, Email
-		FROM dbo.Student
+	```sql
+	SELECT Firstname, Lastname, Email
+	FROM dbo.Student
+	```
 		
 4. list names, email addresses and grade of students who got an A
 
-		SELECT Firstname, Lastname, Email
-		FROM dbo.Student
-		WHERE FinalGrade >= 90
+	```sql
+	SELECT Firstname, Lastname, Email
+	FROM dbo.Student
+	WHERE FinalGrade >= 90
+	```
 				
 5. list the name, email address and final exam grade of each student
 
-		SELECT Firstname, Lastname, Email, Grade
-		FROM dbo.Student AS std, dbo.Grades grd
-		WHERE std.StudentId = grd.StudentId
-		AND grd.AssessmentNumber = '6'
+	```sql
+	SELECT Firstname, Lastname, Email, Grade
+	FROM dbo.Student AS std, dbo.Grades grd
+	WHERE std.StudentId = grd.StudentId
+	AND grd.AssessmentNumber = '6'
+	```
 
 	alternatively
 
-		SELECT Firstname, Lastname, Email, Grade
-		FROM dbo.Student AS student 
-		JOIN dbo.Grades grades
-		ON student.StudentId = grades.StudentId
-		WHERE grades.AssessmentNumber = '6'
+	```sql
+	SELECT Firstname, Lastname, Email, Grade
+	FROM dbo.Student AS student 
+	JOIN dbo.Grades grades
+	ON student.StudentId = grades.StudentId
+	WHERE grades.AssessmentNumber = '6'
+	```
 		
 6. list the average grade per assignment
 
-		SELECT AssessmentNumber, AVG(Grade)
-		FROM dbo.Grades
-		GROUP BY AssessmentNumber
+	```sql
+	SELECT AssessmentNumber, AVG(Grade)
+	FROM dbo.Grades
+	GROUP BY AssessmentNumber
+	```
 
 7. calculate the final grades of the students
 
-		SELECT
-			s.StudentId,
-			s.Firstname,
-			s.Lastname,
-			s.FinalGrade AS StoredFinalGrade,
-			ROUND(SUM(g.Grade * a.Weight) * 100, 0) AS CalculatedFinalGrade
-		FROM dbo.Student AS s
-		JOIN dbo.Grades AS g
-			ON g.StudentId = s.StudentId
-		JOIN dbo.Assessment AS a
-			ON a.AssessmentNumber = g.AssessmentNumber
-		GROUP BY
-			s.StudentId,
-			s.Firstname,
-			s.Lastname,
-			s.FinalGrade
-		ORDER BY
-			s.StudentId;
+	```sql
+	SELECT
+		s.StudentId,
+		s.Firstname,
+		s.Lastname,
+		s.FinalGrade AS StoredFinalGrade,
+		ROUND(SUM(g.Grade * a.Weight) * 100, 0) AS CalculatedFinalGrade
+	FROM dbo.Student AS s
+	JOIN dbo.Grades AS g
+		ON g.StudentId = s.StudentId
+	JOIN dbo.Assessment AS a
+		ON a.AssessmentNumber = g.AssessmentNumber
+	GROUP BY
+		s.StudentId,
+		s.Firstname,
+		s.Lastname,
+		s.FinalGrade
+	ORDER BY
+		s.StudentId;
+	```
 	
 8. Make the final exam 25% of the final grade, and the individual case study 20%.
 
-		UPDATE dbo.Assessment
-		SET Weight = 0.25 WHERE AssessmentNumber = '6';
-		UPDATE dbo.Assessment
-		SET Weight = 0.20 WHERE AssessmentNumber = '3';
+	```sql
+	UPDATE dbo.Assessment
+	SET Weight = 0.25 WHERE AssessmentNumber = '6';
+	UPDATE dbo.Assessment
+	SET Weight = 0.20 WHERE AssessmentNumber = '3';
+	```
 
 9. Recalculate final grades
