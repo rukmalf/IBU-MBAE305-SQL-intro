@@ -64,14 +64,35 @@ The value of data is in turning facts into information with value. Here are seve
 
 		SELECT Firstname, Lastname, Email
 		FROM dbo.Student
-
+		
 4. list names, email addresses and grade of students who got an A
 
 		SELECT Firstname, Lastname, Email
 		FROM dbo.Student
 		WHERE FinalGrade >= 90
+				
+5. list the name, email address and final exam grade of each student
 
-5. calculate the final grades of the students
+		SELECT Firstname, Lastname, Email, Grade
+		FROM dbo.Student AS std, dbo.Grades grd
+		WHERE std.StudentId = grd.StudentId
+		AND grd.AssessmentNumber = '6'
+
+	alternatively
+
+		SELECT Firstname, Lastname, Email, Grade
+		FROM dbo.Student AS student 
+		JOIN dbo.Grades grades
+		ON student.StudentId = grades.StudentId
+		WHERE grades.AssessmentNumber = '6'
+		
+6. list the average grade per assignment
+
+		SELECT AssessmentNumber, AVG(Grade)
+		FROM dbo.Grades
+		GROUP BY AssessmentNumber
+
+7. calculate the final grades of the students
 
 		SELECT
 			s.StudentId,
@@ -92,11 +113,11 @@ The value of data is in turning facts into information with value. Here are seve
 		ORDER BY
 			s.StudentId;
 	
-6. Make the final exam 25% of the final grade, and the individual case study 20%.
+8. Make the final exam 25% of the final grade, and the individual case study 20%.
 
 		UPDATE dbo.Assessment
 		SET Weight = 0.25 WHERE AssessmentNumber = '6';
 		UPDATE dbo.Assessment
 		SET Weight = 0.20 WHERE AssessmentNumber = '3';
 
-7. Recalculate
+9. Recalculate final grades
