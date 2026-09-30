@@ -1,6 +1,6 @@
 # Exercise 3: Creating data on the database
 
-Go back to [main](./README.md#8-exercise-3---creating-data-on-the-database).
+*Go back to [main](./README.md#8-exercise-3---creating-data-on-the-database)*.
 
 Note: this is a third optional step that you can try on your own free of charge once you have [created a SQL Server instance on Azure](./create-sql-server-instance-azure.md) and then [created an Azure SQL database instance](./create-azure-sql-db.md).
 
@@ -98,4 +98,6 @@ Note: this is a third optional step that you can try on your own free of charge 
 	INSERT INTO dbo.Grades(StudentId, AssessmentNumber, Grade) VALUES ('2025091234', 6, 0.87);
 	INSERT INTO dbo.Grades(StudentId, AssessmentNumber, Grade) VALUES ('2026010101', 6, 0.83);
 	INSERT INTO dbo.Grades(StudentId, AssessmentNumber, Grade) VALUES ('2026015678', 6, 0.82);
-	```
+	```	
+
+*Go back to [main](./README.md#8-exercise-3---creating-data-on-the-database)*.
