@@ -154,18 +154,16 @@ The value of data is in turning facts into information with value. Here are seve
 		s.Lastname,
 		s.FinalGrade AS StoredFinalGrade,
 		ROUND(SUM(g.Grade * a.Weight) * 100, 0) AS CalculatedFinalGrade
-	FROM dbo.Student AS s
-	JOIN dbo.Grades AS g
-		ON g.StudentId = s.StudentId
-	JOIN dbo.Assessment AS a
-		ON a.AssessmentNumber = g.AssessmentNumber
+	FROM dbo.Student AS s, dbo.Grades g, dbo.Assessment a 
+	WHERE g.StudentId = s.StudentId
+		AND a.AssessmentNumber = g.AssessmentNumber
 	GROUP BY
 		s.StudentId,
 		s.Firstname,
 		s.Lastname,
 		s.FinalGrade
 	ORDER BY
-		s.StudentId;
+		CalculatedFinalGrade DESC;
 	```
 	
 8. Make the final exam 25% of the final grade, and the individual case study 20%.
