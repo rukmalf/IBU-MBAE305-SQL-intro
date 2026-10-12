@@ -19,7 +19,33 @@ Note: this is a third optional step that you can try on your own free of charge 
 4. Open a SQL window by clicking on the `New query` button.
 ![Step 4 - New query window](./images/azure-08-new-query-window.png)
 
-5. Create data on your database using SQL's INSERT statements by pasting and running the following queries.
+5. Before we insert the data, we need to first create the three tables.
+	```sql
+	CREATE TABLE [dbo].[Student]
+	(
+		StudentId           NVARCHAR(20) NOT NULL PRIMARY KEY,
+		Firstname           NVARCHAR(100) NULL,
+		Lastname            NVARCHAR(100) NULL,
+		Email				NVARCHAR(100) NULL,
+		FinalGrade          INT NULL
+	)
+
+	CREATE TABLE [dbo].[Assessment]
+	(
+		AssessmentNumber    NVARCHAR(20) NOT NULL PRIMARY KEY,
+		Title               NVARCHAR(100) NULL,
+		Weight              DECIMAL(4,2) NOT NULL
+	)
+
+	CREATE TABLE [dbo].[Grades]
+	(
+		StudentId           NVARCHAR(20) NOT NULL,
+		AssessmentNumber    NVARCHAR(20) NOT NULL,
+		Grade               DECIMAL(4,2) NOT NULL
+	)
+	```
+
+6. Create data on your database using SQL's INSERT statements by pasting and running the following queries.
 	First, do this on the Student table
 	```sql
 	-- create Student records
