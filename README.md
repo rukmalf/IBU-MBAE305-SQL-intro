@@ -76,9 +76,13 @@ Sometimes, the `SELECT` statement is considered to be a separate subcategory of 
 
 This is an optional step that you can try on your own free of charge using the Microsoft Azure subscription that you get through IBU. See step-by-step instructions [here](./create-sql-server-instance-azure.md). 
 
+If you are comfortable with Azure, Azure CLI and Terraform, you can [deploy the database server and the database via Terraform](./create-infrastructure-terraform.md).
+
 ## 7. Exercise 2 - creating a database on Azure
 
 This is an optional step that builds on the previous step, that you can again try on your own free of charge. See step-by-step instructions [here](./create-azure-sql-db.md). 
+
+If you are comfortable with Azure, Azure CLI and Terraform, you can [deploy the database server and the database via Terraform](./create-infrastructure-terraform.md).
 
 ## 8. Exercise 3 - creating data on the database
 
